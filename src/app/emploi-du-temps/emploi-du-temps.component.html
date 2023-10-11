@@ -1,0 +1,148 @@
+<app-template></app-template>
+
+<!-- Section du logo -->
+<div style="max-width: 90%; margin:auto">
+  <div class="logo text-left">
+    <a href="/home">
+      <img width="250" src="assets/gymlogo.png" alt="">
+    </a>
+  </div>
+
+  
+  
+  <div style="max-width: 90%; margin:auto">
+   
+    
+ 
+    <div class="container">
+
+      
+      <h1 class="text-center"><i>Emploi du temps des cours</i></h1>
+      
+      
+    </div>
+    
+    
+    
+    <!-- Ajout des images -->
+    
+
+  <!-- Tableau affichant l'emploi du temps des cours -->
+  
+
+    <!-- Remplacez cette partie de votre code HTML -->
+
+    <div class="button-container">
+      <button class="btn btn-red" (click)="open(content)">Ajouter cours</button>
+      <button class="btn btn-green" (click)="resetSchedule()" >Reset Schedule</button>
+    </div>
+    <br>
+    <table class="shadow-table custom-table">
+    <thead>
+      <tr>
+        <th></th>
+        <th *ngFor="let jour of joursSemaine">{{ jour }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let heure of [8, 10, 12, 14, 16, 18, 20]">
+        <tr>
+          <td>{{ heure }}:00</td>
+          <td *ngFor="let jour of joursSemaine">
+            <ng-container *ngIf="isCours(heure, jour); else empty">
+              <td [attr.rowspan]="getCours(heure, jour).rowspan">{{ getCours(heure, jour).nomsCours }} "{{ getCours(heure, jour).coachnames }}"</td>
+            </ng-container>
+            <ng-template #empty>
+              <td></td>
+            </ng-template>
+          </td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+  
+
+
+  
+
+    </div>
+</div>
+
+<!-- Modal d'ajout de cours -->
+<ng-template #content let-modal>
+  <div class="modal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">Ajouter un cours</h4>
+          <!-- Bouton pour fermer la modal -->
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Formulaire pour ajouter un cours -->
+          <form (ngSubmit)="ajouterCours(coursForm.value); modal.close()" #coursForm="ngForm">
+            <div class="form-group">
+              <label for="jour">Jour:</label>
+              <!-- Liste déroulante pour choisir le jour -->
+              <select class="form-control" name="jour" ngModel>
+                <option *ngFor="let jour of joursSemaine" [value]="jour">{{ jour }}</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="heureDebut">Heure de début:</label>
+              <select class="form-control" name="heureDebut" ngModel>
+                <option *ngFor="let heure of [8, 10, 12, 14, 16, 18, 20]" [value]="heure">{{ heure }}:00</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="heureFin">Heure de fin:</label>
+              <select class="form-control" name="heureFin" ngModel>
+                <option *ngFor="let heure of [10, 12, 14, 16, 18, 20, 22]" [value]="heure">{{ heure }}:00</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="nomsCours">Nom du cours:</label>
+              <!-- Liste déroulante pour choisir le nom du cours à ajouter-->
+
+              <select class="form-control" name="nomsCours" required [(ngModel)]="selectedCours">
+                <option *ngFor="let nomCours of coursList" [value]="nomCours">{{ nomCours }}</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="coachnames">Coach:</label>
+              <select class="form-control" name="coachList" required [(ngModel)]="coachnames">
+                <option *ngFor="let coachname of coachList" [value]="coachname">{{ coachname }}</option>
+              </select>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary">Ajouter</button>
+              <button type="button" class="btn btn-secondary" (click)="modal.close('Close click')">Fermer</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<app-foot></app-foot>
+

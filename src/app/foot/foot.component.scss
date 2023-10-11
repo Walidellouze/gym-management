@@ -1,0 +1,68 @@
+body {
+
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  html, body {
+    height: 100%;
+  }
+  
+  .mat-sidenav-container {
+    min-height: 200%;
+  }
+  
+  .container {
+    padding-bottom: 888px; /* hauteur du footer */
+  }
+  
+  .main-toolbar, .sidenav-toolbar, .footer {
+    background-image: linear-gradient(to right, #67a3d2, #d0eaff);
+    color: white;
+  }
+  
+  .sidenav {
+    width: 230px;
+    background-image: linear-gradient(to right, #b3d6fe, #dfdfdf);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  
+  
+  
+  .nav-link:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  .footer {
+    position: relative;
+    bottom: 55;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    color: white;
+  }
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  .center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
+  
+  
+  button {
+    transition: opacity 0.3s ease-in-out;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    opacity: 0.5;
+  }
+  

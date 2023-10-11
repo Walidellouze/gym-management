@@ -1,0 +1,94 @@
+<app-template></app-template>
+
+<div class="logo text-center" style="max-width: 90%; margin:auto">
+  <img width="250" src="assets/gymlogo.png" alt="">
+  <div class="d-flex justify-content-between" >
+    <button routerLink="/list-member" mat-raised-button color="primary"><i class="fa fa-arrow-left" aria-hidden="true"></i>Back to List</button>
+  </div>
+</div>
+
+
+
+
+
+
+
+<mat-card style="background-image: linear-gradient(to right, #67a3d2, #d0eaff) ; max-width:40%;max-height:90%; margin:auto" class="my-card text-center mat-elevation-z4"  >
+  <mat-card-header class="justify-content-center">
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{userDetails.firstName}} {{userDetails.lastName}}</mat-card-title>
+    <mat-card-subtitle>{{userDetails.email}}</mat-card-subtitle>
+  </mat-card-header>
+  
+  
+  <mat-card-content >
+    <mat-list class="my-list">
+      <mat-list-item>
+        <div matLine>
+          Coach Name :
+          <button mat-raised-button color="accent">{{userDetails.coachName}}</button>
+        </div>
+      </mat-list-item>
+
+
+      <mat-list-item>
+        <div matLine>
+          Mobile Number :
+          <button mat-raised-button color="accent">{{userDetails.mobile}}</button>
+        </div>
+      </mat-list-item>
+
+      <mat-list-item>
+        <div matLine>
+          Gender :
+          <button mat-raised-button color="accent">{{userDetails.gender}}</button>
+        </div>
+      </mat-list-item>
+      <mat-list-item>
+        <div matLine>
+          Package :
+          <button mat-raised-button color="warn">{{userDetails.package}}</button>
+        </div>
+      </mat-list-item>
+      <mat-list-item>
+        <div matLine>
+          BMI :
+          <button mat-raised-button color="accent">{{userDetails.bmi}}</button>
+        </div>
+      </mat-list-item>
+      <mat-list-item>
+        <div matLine>
+          BMI Result :
+          <button mat-raised-button color="primary">{{userDetails.bmiResult}}</button>
+        </div>
+      </mat-list-item>
+      <mat-list-item>
+        <div matLine>
+          Trainer Require :
+          <button mat-raised-button color="warn">{{userDetails.requireTrainer}}</button>
+        </div>
+      </mat-list-item>
+      <mat-list-item>
+        <div matLine>
+          Cours :
+          <button mat-raised-button color="primary"><mat-chip-listbox>
+              <ng-container *ngFor="let row of userDetails.important">
+                <mat-chip-option selected>{{row}}</mat-chip-option>
+              </ng-container>
+            </mat-chip-listbox></button>
+
+        </div>
+      </mat-list-item>
+    </mat-list>
+    
+  </mat-card-content>
+  <br>
+   
+</mat-card>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<app-foot></app-foot>

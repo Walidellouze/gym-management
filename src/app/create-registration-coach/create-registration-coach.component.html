@@ -1,0 +1,60 @@
+<app-template></app-template>
+
+<div class="logo text-center">
+  <img width="250" src="assets/gymlogo.png" alt="">
+</div>
+<br><br><br><br>
+<div class="registration-form">
+  
+
+  <form [formGroup]="registrationFormcoach" (ngSubmit)="submit()" novalidate  style="max-width: 90%">
+    <div class="row">
+      <div class="col-md-6">
+        <mat-form-field appearance="outline">
+          <mat-label>First Name</mat-label>
+          <input formControlName="firstName" matInput placeholder="firstName" required>
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+      </div>
+      <div class="col-md-6">
+        <mat-form-field appearance="outline">
+          <mat-label>LastName</mat-label>
+          <input formControlName="lastName" matInput placeholder="lastName" required>
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+      </div>
+      <div class="col-md-6">
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input formControlName="email" matInput placeholder="email" required>
+          <mat-icon matSuffix>mail_outline</mat-icon>
+        </mat-form-field>
+      </div>
+      <div class="col-md-6">
+        <mat-form-field appearance="outline">
+          <mat-label>Mobile</mat-label>
+          <input type="number" formControlName="mobile" matInput placeholder="mobile" required>
+          <mat-icon matSuffix>mobile_screen_share</mat-icon>
+        </mat-form-field>
+      </div>
+
+      <div class="col-md-6 mt-4">
+        <mat-form-field appearance="outline">
+          <mat-label>Select speciality</mat-label>
+          <mat-select formControlName="package" required>
+            <mat-option *ngFor="let package of packages" [value]="package">
+              {{package}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <button mat-raised-button color="accent" [disabled]="!registrationFormcoach.valid">Submit</button>
+    <button *ngIf="isUpdateActive" (click)="update()" mat-raised-button color="accent">Update</button>
+  </form>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<app-foot></app-foot>
+<lib-ng-toast></lib-ng-toast>
+<ng-confirm></ng-confirm>

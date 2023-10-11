@@ -1,0 +1,36 @@
+.example-card {
+  max-width: 800px;
+  display: block;
+  margin: 0 auto;
+}
+
+.example-header-image {
+  background-image: url("https://www.citypng.com/public/uploads/preview/profile-user-round-white-icon-symbol-png-11639594348fn8rlcxrqo.png");
+  background-size: cover;
+}
+.my-card {
+  background-color: #d2e4ff;
+  border-radius: 60px;
+  padding: 50px;
+}
+
+.my-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.my-list mat-list-item {
+  border: 2px solid #1f0e10;
+  border-radius: 20px;
+  margin-bottom: 11px;
+  padding: 25px;
+}
+
+.my-list mat-list-item:hover {
+  background-color: #eec39d;
+}
+
+.mat-elevation-z4 {
+  box-shadow: 0 8px 10000px 0 rgba(25, 55, 4, 0.2), 0 18px 20px 0 rgba(99, 23, 23, 0.19);
+}

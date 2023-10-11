@@ -1,0 +1,279 @@
+{
+  "admins": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin123"
+    }
+  ],
+  "enquiry": [
+    {
+      "firstName": "amine",
+      "lastName": "maalej",
+      "email": "amine@gmail.com",
+      "mobile": 272727888,
+      "weight": 90,
+      "height": 1.81,
+      "bmi": 27.471688898385274,
+      "bmiResult": "Overweight",
+      "gender": "Male",
+      "requireTrainer": "Yes",
+      "coachName": "sarra",
+      "package": "Monthly",
+      "important": [
+        "Bodybuilding",
+        "Dance-based classe"
+      ],
+      "enquiryDate": "2023-05-15T23:00:00.000Z",
+      "haveGymBefore": "No",
+      "profilePicture": "",
+      "imageUrl": "",
+      "id": 109
+    },
+    {
+      "firstName": "aymen",
+      "lastName": "elloumi",
+      "email": "aymenelloumi@gmail.com",
+      "mobile": 52516818,
+      "weight": 83,
+      "height": 1.77,
+      "bmi": 26.493025631204315,
+      "bmiResult": "Overweight",
+      "gender": "Male",
+      "requireTrainer": "Yes",
+      "coachName": "aymen",
+      "package": "Monthly",
+      "important": [
+        "Bodybuilding",
+        "Group fitness classe"
+      ],
+      "enquiryDate": "2023-05-25T23:00:00.000Z",
+      "haveGymBefore": "Yes",
+      "profilePicture": "",
+      "imageUrl": "",
+      "id": 110
+    },
+    {
+      "firstName": "abdelkader",
+      "lastName": "jmal",
+      "email": "abdelkader@gmail.com",
+      "mobile": 24584847,
+      "weight": 99,
+      "height": 1.77,
+      "bmi": 31.600114909508758,
+      "bmiResult": "Obese",
+      "gender": "Male",
+      "requireTrainer": "Yes",
+      "coachName": "ahmed",
+      "package": "Quarterly",
+      "important": [
+        "Bodybuilding",
+        "Group fitness classe"
+      ],
+      "enquiryDate": "2023-05-01T23:00:00.000Z",
+      "haveGymBefore": "No",
+      "profilePicture": "",
+      "imageUrl": "",
+      "id": 112
+    },
+    {
+      "firstName": "mariem",
+      "lastName": "kammoun",
+      "email": "mariem@gmail.com",
+      "mobile": 25456858,
+      "weight": 60,
+      "height": 1.74,
+      "bmi": 19.817677368212443,
+      "bmiResult": "Normal",
+      "gender": "Female",
+      "requireTrainer": "Yes",
+      "coachName": "Walid",
+      "package": "Monthly",
+      "important": [
+        "Yoga classe",
+        "Dance-based classe"
+      ],
+      "enquiryDate": "2023-05-05T23:00:00.000Z",
+      "haveGymBefore": "No",
+      "profilePicture": "",
+      "imageUrl": "",
+      "id": 113
+    },
+    {
+      "firstName": "aymen",
+      "lastName": "elloumi",
+      "email": "aymenelloumi@gmail.com",
+      "mobile": 52516818,
+      "weight": 88,
+      "height": 1.88,
+      "bmi": 24.898143956541425,
+      "bmiResult": "Normal",
+      "gender": "Male",
+      "requireTrainer": "Yes",
+      "coachName": "Ameur",
+      "package": "Monthly",
+      "important": [
+        "Bodybuilding"
+      ],
+      "enquiryDate": "2023-05-26T23:00:00.000Z",
+      "haveGymBefore": "Yes",
+      "profilePicture": "",
+      "imageUrl": "",
+      "id": 114
+    },
+    {
+      "firstName": "helmi",
+      "lastName": "jerbi",
+      "email": "helmi@gmail.com",
+      "mobile": 26521988,
+      "weight": 77,
+      "height": 1.88,
+      "bmi": 21.785875961973744,
+      "bmiResult": "Normal",
+      "gender": "Male",
+      "requireTrainer": "Yes",
+      "coachName": "ahmed",
+      "package": "Quarterly",
+      "important": [
+        "Bodybuilding"
+      ],
+      "enquiryDate": "2023-05-30T23:00:00.000Z",
+      "haveGymBefore": "Yes",
+      "profilePicture": "",
+      "imageUrl": "",
+      "id": 115
+    },
+    {
+      "firstName": "zied",
+      "lastName": "krichen",
+      "email": "zied@gmail.com",
+      "mobile": 58561688,
+      "weight": 66,
+      "height": 1.7,
+      "bmi": 22.837370242214536,
+      "bmiResult": "Normal",
+      "gender": "Male",
+      "requireTrainer": "Yes",
+      "coachName": "ahmed",
+      "package": "Monthly",
+      "important": [
+        "Boot camp classe"
+      ],
+      "enquiryDate": "2023-05-24T23:00:00.000Z",
+      "haveGymBefore": "No",
+      "profilePicture": "",
+      "imageUrl": "",
+      "id": 116
+    }
+  ],
+  "signup": [
+    {
+      "name": "walid",
+      "email": "walidellouze22@gmail.com",
+      "mobile": 24258484,
+      "password": "123",
+      "id": 5
+    }
+  ],
+  "enquiry2": [
+    {
+      "firstName": "Walid",
+      "lastName": "Ellouze",
+      "email": "walidellouze22@gmail.com",
+      "mobile": 24258484,
+      "package": "Strength and conditioning",
+      "profilePicture": "",
+      "id": 5
+    },
+    {
+      "firstName": "aymen",
+      "lastName": "elloumi",
+      "email": "aymenelloumi@gmail.com",
+      "mobile": 52516818,
+      "package": "Strength and conditioning",
+      "profilePicture": "",
+      "id": 6
+    },
+    {
+      "firstName": "Ameur",
+      "lastName": "bouaziz",
+      "email": "ameurbouaziz@gmail.com",
+      "mobile": 25078569,
+      "package": "Group fitness instruction",
+      "profilePicture": "",
+      "id": 7
+    },
+    {
+      "firstName": "ahmed",
+      "lastName": "kallel",
+      "email": "ahmed26@exemple.org",
+      "mobile": 55554364,
+      "package": "Flexibility and mobility training",
+      "profilePicture": "",
+      "id": 8
+    },
+    {
+      "firstName": "hsan",
+      "lastName": "abid",
+      "email": "hsan@gmail.com",
+      "mobile": 57278288,
+      "package": "Functional training",
+      "profilePicture": "",
+      "id": 9
+    },
+    {
+      "firstName": "slim",
+      "lastName": "sallemi",
+      "email": "farouk@gmail.com",
+      "mobile": 25168518,
+      "package": "Flexibility and mobility training",
+      "profilePicture": "",
+      "id": 10
+    },
+    {
+      "firstName": "sarra",
+      "lastName": "abid",
+      "email": "sarra@gmail.com",
+      "mobile": 55168186,
+      "package": "Sports-specific training (e.g. soccer, basketball, tennis)",
+      "profilePicture": "",
+      "id": 11
+    },
+    {
+      "firstName": "Walid",
+      "lastName": "Ellouze",
+      "email": "walidellouze22@gmail.com",
+      "mobile": 24258484,
+      "package": "Injury rehabilitation and prevention",
+      "profilePicture": "",
+      "id": 12
+    }
+  ],
+  "schedule": [
+    {
+      "jour": "Lundi",
+      "heure": "10h-11h",
+      "activite": "Yoga"
+    },
+    {
+      "jour": "Mardi",
+      "heure": "14h-15h",
+      "activite": "Pilates"
+    },
+    {
+      "jour": "Mercredi",
+      "heure": "18h-19h",
+      "activite": "Zumba"
+    },
+    {
+      "jour": "Jeudi",
+      "heure": "9h-10h",
+      "activite": "Cardio"
+    },
+    {
+      "jour": "Vendredi",
+      "heure": "16h-17h",
+      "activite": "Musculation"
+    }
+  ]
+}

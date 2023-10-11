@@ -1,0 +1,287 @@
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/web.css">
+  <title>Portfolio</title>
+  <style>
+      * {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* font-family: 'Josefin Sans', sans-serif; */
+  font-family: 'Poppins', sans-serif;
+  max-height: 100vh;
+}
+
+/*nav */
+header {
+  padding: 1.7rem 1rem;
+  background-color: #708dcb;
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  
+  align-items: center;
+  margin: 50px;
+  padding: 0;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.logo a {
+  color: #381019;
+  text-decoration: none;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: .97rem;
+  font-weight: 1000;
+  letter-spacing: .7px;
+  padding: 1rem;
+  padding: 0.4rem 1rem;
+}
+
+nav a.active,
+nav a:hover {
+  background-color: #244D61;
+  color: #fff;
+  border-radius: 1rem;
+  transition: all.3s ease-in-out;
+}
+
+#click {
+  display: none;
+}
+
+.menu {
+  display: none;
+}
+
+/* Nav */
+
+section {
+  margin: 2rem 8.5rem;
+  ;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5rem auto;
+}
+
+.main h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.main p {
+  margin-top: 1rem;
+  font-size: .98rem;
+}
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+  margin-top: 1.7rem;
+}
+
+.social a {
+  color: #244D61;
+  font-size: 1rem;
+  border: 1.6px solid #244D61;
+  border-radius: 50%;
+  padding: .35rem;
+  text-align: center;
+  width: 26px;
+}
+
+.social a:hover {
+  color: #241111;
+  background-color: #244D61;
+  transition: all .3s ease-in-out;
+}
+
+.main h1 span:nth-child(1) {
+  font-size: 1.5rem;
+}
+
+.images {
+  background-image: url(/img/graph3.png);
+  background-repeat: no-repeat;
+  background-position: 0 -75px;
+}
+
+@media only screen and (max-width:480px) {
+  .menu {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #244D61;
+  }
+
+  header {
+      padding: 0.7rem 1rem;
+      align-items: center;
+      max-width: 100%;
+      
+  }
+
+  nav {
+      position: absolute;
+      display: grid;
+      top: 75px;
+      width: calc(100% - 40px);
+      text-align: center;
+      background-color: #fff;
+      left: -100%;
+  }
+
+  #click:checked~nav {
+      left: 0%;
+      transition: all 0.3s ease;
+  }
+
+  section {
+      margin: 1rem 1.5rem;
+  }
+
+}
+  </style>
+</head>
+
+
+
+
+
+
+
+
+
+<mat-sidenav-container style="position: relative;">
+    <!-- Background image -->
+    <div class="background-image"></div>
+  
+    <!-- Toolbar -->
+    <mat-toolbar class="main-toolbar">
+      
+      <!-- Bouton pour ouvrir le sidenav -->
+      <button mat-button (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      
+      <!-- Logo -->
+      <div class="logo text-left">
+        <a href="/home" style="text-decoration: none;">
+          <span style="color: rgb(11, 55, 99);">Ellouze</span>
+          <span style="color: rgb(148, 72, 52);">Gym</span>
+        </a>
+      </div>
+      
+      <!-- Spacer pour centrer le contenu de la toolbar -->
+      <span class="example-spacer"></span>
+  
+  
+      <nav class="navbar navbar-expand-lg ">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto justify-content-center">
+            <!-- ... -->
+          
+          <!-- ... -->
+          <header>
+              
+            <input type="checkbox" id="click">
+            <label for="click" class="mainicon">
+                <div class="menu">
+                    <i class="bi bi-list"></i>
+                </div>
+            </label>
+            <nav>
+                <a href="home" class="active">Home</a>
+                <a href="emploi">Emploi</a>
+                <a href="list-member">Members</a>
+                <a href="list-coach">Coachs</a>
+                
+            </nav>
+        </header>
+          
+            
+            <button class="btn nav-link" routerLink="/login">
+              <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+       
+          
+           
+          </ul>
+          
+        </div>
+        
+        
+        
+      </nav>
+      
+      
+      
+    </mat-toolbar>
+  
+    
+  
+    <!-- Sidenav -->
+    <mat-sidenav #drawer fixedInViewport="true" mode="over" opened="false" class="sidenav">
+      <mat-toolbar class="sidenav-toolbar" fxLayout fxLayoutGap="16px">
+        <!-- Logo -->
+        <span>Ellouze Gym </span>
+      </mat-toolbar>
+  
+      <!-- Liste de navigation -->
+      <mat-nav-list>
+        <!-- Bouton pour accéder à la page emploi -->
+        <mat-list-item>
+          <a routerLink="/emploi" class="nav-link"><mat-icon>schedule</mat-icon> Emploi du temps</a>
+        </mat-list-item>
+        
+        <!-- Bouton pour accéder à la page de la liste des membres -->
+        <mat-list-item>
+          <a routerLink="/list-member" class="nav-link"><mat-icon>group</mat-icon> Members List</a>
+        </mat-list-item>
+        <!-- Bouton pour accéder à la page d'inscription d'un nouveau membre -->
+       
+        <!-- Bouton pour accéder à la page d'inscription d'un nouveau coach -->
+       <!-- Bouton pour accéder à la page d'inscription d'un nouveau coach -->
+ 
+  
+  <!-- Bouton pour accéder à la page de la liste des coaches -->
+  <mat-list-item>
+    <a routerLink="/list-coach" class="nav-link"><mat-icon>fitness_center</mat-icon> Coach List</a>
+  </mat-list-item>
+  
+        <mat-list-item>
+          <!-- Élément vide pour créer de l'espace entre les boutons -->
+        </mat-list-item>
+      </mat-nav-list>
+    </mat-sidenav>
+  </mat-sidenav-container>
+  
+  <!-- Conteneur principal -->
+  
+  
+
+ 
+  

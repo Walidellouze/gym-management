@@ -1,0 +1,53 @@
+<app-template></app-template>
+
+<div class="logo text-center" style="max-width: 90%; margin:auto">
+  <img width="250" src="assets/gymlogo.png" alt="">
+  <div class="d-flex justify-content-between" >
+    <button routerLink="/list-coach" mat-raised-button color="primary"><i class="fa fa-arrow-left" aria-hidden="true"></i>Back to List</button>
+  </div>
+</div>
+
+
+<mat-card style="background-image: linear-gradient(to right, #67a3d2, #d0eaff) ; max-width:40%;max-height:90%; margin:auto" class="my-card text-center mat-elevation-z4"  >
+    <mat-card-header class="justify-content-center">
+      <div mat-card-avatar class="example-header-image"></div>
+   
+      <mat-card-title>{{coachDetails.firstName}} {{coachDetails.lastName}}</mat-card-title>
+      <mat-card-subtitle>{{coachDetails.email}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list class="my-list">
+        <mat-list-item>
+    <div matLine>
+        speciality :
+        <button mat-raised-button color="warn">{{coachDetails.package}}</button>
+      </div>
+    </mat-list-item>
+  </mat-list>
+</mat-card-content>
+        
+        
+        
+        
+        
+ 
+    <mat-card-content>
+      <mat-list class="my-list">
+        <mat-list-item>
+          <div matLine>
+            Mobile Number :
+            <button mat-raised-button color="accent">{{coachDetails.mobile}}</button>
+          </div>
+        </mat-list-item>
+  
+        
+        
+        
+        
+        
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <app-foot></app-foot>
+
