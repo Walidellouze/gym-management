@@ -39,7 +39,7 @@ Now, let's start the Angular application. In a new terminal, run the following c
 ng serve
 
 
-# The Angular app will be available at http://localhost:4200.
+### The Angular app will be available at http://localhost:4200.
 
-# Open your web browser and navigate to http://localhost:4200 to access the Gym Management application.
+### Open your web browser and navigate to http://localhost:4200 to access the Gym Management application.
 
